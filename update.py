@@ -21,7 +21,7 @@ def load_data():
 
     with codecs.open('AllGAN-r2.tsv',"rbU", "utf-8") as fid:
         reader = csv.DictReader(fid, delimiter='\t')
-        gans = [row for row in reader]
+        gans = list(reader)
     return gans
 
 
